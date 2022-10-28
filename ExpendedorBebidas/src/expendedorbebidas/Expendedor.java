@@ -61,6 +61,7 @@ public class Expendedor {
                 }else{
                     MonVu.addMoneda(moneda, precioBebidas);
                 }
+                return bebida3;
             }else{
                 if(moneda != null){
                     MonVu.addMoneda(moneda,0);
