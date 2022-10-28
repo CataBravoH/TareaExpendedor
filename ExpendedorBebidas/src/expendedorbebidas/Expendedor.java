@@ -24,41 +24,41 @@ public class Expendedor {
         }
     }
     
-    public Bebida comprarBebida(Moneda m, int Cual){
-        Bebida b= null;
-        Bebida o=null;
-        if(m == null){
+    public Bebida comprarBebida(Moneda moneda, int Elegida){
+        Bebida bebida1= null;
+        Bebida bebida2=null;
+        if(moneda == null){
             return null;
         }
-        if(m.getValor() >= precioBebidas){
-            if(Cual == COCA){
-                b = Coca.getBebida();
-                if(b == null){
-                    MonVu.addMoneda(m, 0);
+        if(moneda.getValor() >= precioBebidas){
+            if(Elegida == COCA){
+                bebida1 = Coca.getBebida();
+                if(bebida1 == null){
+                    MonVu.addMoneda(moneda, 0);
                 }else{
-                    MonVu.addMoneda(m, precioBebidas);
+                    MonVu.addMoneda(moneda, precioBebidas);
                 }
-                return b;
-            }else if(Cual == SPRITE){
-                o= Sprite.getBebida();
-                if(o == null){
-                    MonVu.addMoneda(m, 0);
+                return bebida1;
+            }else if(Elegida == SPRITE){
+                bebida2 = Sprite.getBebida();
+                if(bebida2 == null){
+                    MonVu.addMoneda(moneda, 0);
                 }else{
-                    MonVu.addMoneda(m, precioBebidas);
+                    MonVu.addMoneda(moneda, precioBebidas);
                 }
-                return o;
+                return bebida2;
             }else{
-                if(m!= null){
-                    MonVu.addMoneda(m,0);
+                if(moneda != null){
+                    MonVu.addMoneda(moneda,0);
                     return null;
                 }
             }
         }
         else{
-            if(m == null){
+            if(moneda == null){
                 return null;
             }else{
-                MonVu.addMoneda(m, precioBebidas);
+                MonVu.addMoneda(moneda, precioBebidas);
                 return null;
             }
         }
