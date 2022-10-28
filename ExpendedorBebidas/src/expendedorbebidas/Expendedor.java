@@ -6,16 +6,17 @@ public class Expendedor {
     private Deposito Fanta;
     private DepositoVuelto MonVu;
     private int precioBebidas;
-    public static final int COCA=1;
-    public static final int SPRITE=2;
-    public static final int FANTA=3;
+    public static int COCA = 1;
+    public static int SPRITE = 2;
+    public static int FANTA = 3;
     
     public Expendedor(int numBebidas, int precioBebidas){
         MonVu = new DepositoVuelto();
         this.precioBebidas = precioBebidas;
         Coca = new Deposito();
         Sprite = new Deposito();
-            
+        Fanta = new Deposito();
+        
         if(numBebidas != 0){
             for(int i=0; i<numBebidas; i++){
                 Coca.addBebida(new CocaCola(100+i));
@@ -37,7 +38,7 @@ public class Expendedor {
             return null;
         }
         if(moneda.getValor() >= precioBebidas){
-            if(Elegida == COCA){
+            if(Elegida == 1){
                 bebida1 = Coca.getBebida();
                 if(bebida1 == null){
                     MonVu.addMoneda(moneda, 0);
@@ -45,7 +46,7 @@ public class Expendedor {
                     MonVu.addMoneda(moneda, precioBebidas);
                 }
                 return bebida1;
-            }else if(Elegida == SPRITE){
+            }else if(Elegida == 2){
                 bebida2 = Sprite.getBebida();
                 if(bebida2 == null){
                     MonVu.addMoneda(moneda, 0);
@@ -53,7 +54,7 @@ public class Expendedor {
                     MonVu.addMoneda(moneda, precioBebidas);
                 }
                 return bebida2;
-            }else if(Elegida == FANTA){
+            }else if(Elegida == 3){
                 bebida3 = Fanta.getBebida();
                 if(bebida3 == null){
                     MonVu.addMoneda(moneda,0);
