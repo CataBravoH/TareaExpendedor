@@ -4,7 +4,7 @@ public class ExpendedorBebidas {
 
     public static void main(String[] args) {
         
-        Expendedor expen = new Expendedor(3,500);
+        Expendedor expen = new Expendedor(3,400);
         
         Moneda mon1000 = new Moneda1000();
         Moneda mon1500 = new Moneda1500();
