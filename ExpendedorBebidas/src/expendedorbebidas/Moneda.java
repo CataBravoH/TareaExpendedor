@@ -22,6 +22,7 @@ class Moneda100 extends Moneda{
 }
 
 class Moneda500 extends Moneda{
+    
    public Moneda500(){
        super();
    }
@@ -32,6 +33,7 @@ class Moneda500 extends Moneda{
 }
 
 class Moneda1000 extends Moneda{
+    
    public Moneda1000(){
        super();
    }
@@ -41,6 +43,7 @@ class Moneda1000 extends Moneda{
    }
 }
 class Moneda1500 extends Moneda{
+    
    public Moneda1500(){
        super();
    }

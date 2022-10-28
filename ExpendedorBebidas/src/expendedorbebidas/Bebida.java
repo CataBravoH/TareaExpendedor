@@ -19,7 +19,7 @@ class Sprite extends Bebida{
     }
     @Override
     public String beber(){
-        return new String ("Sprite");
+        return "Sprite";
     }
 }
 
@@ -30,6 +30,6 @@ class CocaCola extends Bebida{
     }
     @Override
     public String beber(){
-        return new String ("CocaCola");
+        return "CocaCola";
     }
 }
