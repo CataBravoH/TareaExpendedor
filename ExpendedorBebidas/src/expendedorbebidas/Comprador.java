@@ -14,6 +14,8 @@ public class Comprador {
         }
         if(bebida != null){
             tomar = bebida.beber();
+        }else{
+            tomar = "nada";
         }
     }
     
